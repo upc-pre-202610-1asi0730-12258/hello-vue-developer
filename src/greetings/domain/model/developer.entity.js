@@ -19,7 +19,9 @@ export class Developer {
     }
 
     get fullName() {
-        return `${this.#firstName} ${this.#lastName}`;
+        return this.#firstName && this.#lastName
+            ? `${this.#firstName} ${this.#lastName}`
+            : 'Unknown';
     }
 
 }
